@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediksi Halal / Haram</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Deteksi Produk Halal / Haram</h1>
+        <form method="POST">
+            <input type="text" name="komposisi" placeholder="Masukkan komposisi produk" required>
+            <button type="submit">Cek Status</button>
+        </form>
+
+        {% if hasil %}
+            <h2>Hasil: {{ hasil }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
